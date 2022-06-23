@@ -1,6 +1,7 @@
 <script>
 import ProductSummary from "@/components/ProductSummary.vue";
 import ProductPromo from "@/components/ProductPromo.vue";
+import AboutProduct from "@/components/AboutProduct.vue";
 import product1 from "@/assets/products/product1.svg?url";
 import product2 from "@/assets/products/product2.svg?url";
 import product3 from "@/assets/products/product3.svg?url";
@@ -11,6 +12,7 @@ export default {
   components: {
     ProductSummary,
     ProductPromo,
+    AboutProduct,
   },
   data() {
     return {
@@ -53,6 +55,12 @@ export default {
             "An offline solution run by mini-computers that are equipped with wireless local area network for contactless file transfers.",
         },
       ],
+      demographList: [
+        { name: "Learning Materials Donated", count: 1200, counter: 0 },
+        { name: "LMS Users", count: 5500, counter: 0 },
+        { name: "Trained Professionals", count: 3000, counter: 0 },
+        { name: "Lorem Ipsum", count: 1200, counter: 0 },
+      ],
     };
   },
 };
@@ -68,4 +76,5 @@ export default {
     :productPromoTitle="productPromoTitle"
     :productPromoDetails="productPromoDetails"
   />
+  <AboutProduct :demographList="demographList" />
 </template>
