@@ -70,7 +70,7 @@ export default {
     justify-content: center;
   }
   #partners-view {
-    margin-bottom: 20%;
+    margin-bottom: 5%;
   }
   .partner-logo {
     width: 30%;

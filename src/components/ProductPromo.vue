@@ -19,7 +19,6 @@ export default {
       let currentScrollPosition = window.pageYOffset;
       let element = document.getElementById("promo-details-div");
       let collection = document.getElementsByClassName("promo-text");
-      console.log(currentScrollPosition + "-" + element.offsetTop);
       if (currentScrollPosition > element.offsetTop - 100) {
         collection.item(0).classList.add("display");
         if (currentScrollPosition > collection.item(0).offsetTop) {
