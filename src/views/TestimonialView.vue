@@ -24,7 +24,7 @@ export default {
         <path :d="quote" />
       </svg>
       <div>
-        {{ testimony }}
+        <p>{{ testimony }}</p>
       </div>
       <section>
         <p>{{ name }}</p>

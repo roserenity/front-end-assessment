@@ -19,9 +19,17 @@ export default {
       let currentScrollPosition = window.pageYOffset;
       let element = document.getElementById("promo-details-div");
       let collection = document.getElementsByClassName("promo-text");
-      if (currentScrollPosition > element.offsetTop - 100) {
-        collection.item(0).classList.add("display");
-        if (currentScrollPosition > collection.item(0).offsetTop) {
+      if (
+        currentScrollPosition > element.offsetTop - 100 &&
+        currentScrollPosition < element.offsetTop + 100
+      ) {
+        if (!collection.item(0).classList.contains("display")) {
+          collection.item(0).classList.add("display");
+        }
+        if (
+          currentScrollPosition > collection.item(0).offsetTop &&
+          !collection.item(1).classList.contains("display")
+        ) {
           collection.item(1).classList.add("display");
         }
       }
